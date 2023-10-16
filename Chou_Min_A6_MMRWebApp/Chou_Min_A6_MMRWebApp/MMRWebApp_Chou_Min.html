@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Retirement Calculator</title>
+  <link rel="stylesheet" type="text/css" href="./MMRWebApp_Chou_Min.css">
+  
+</head>
+
+<body onload="initialize()">
+	<h3 class="center">Retirement Calculator</h3>
+
+	<form id="inputFormId">
+    <table id="inputTableId" class="center">
+      <tr>
+        <td>
+          <input 	id="startingAgeId" type="number" 
+          value="25" min="0" max="65" step="any"
+          placeholder="Starting Age" required>
+        </td>
+
+        <td>
+          <input 	id="retirementAgeId" type="number"
+          value="65" min="0" max="65" step="any"
+          placeholder="Retirement Age" required>
+        </td>
+
+      </tr>
+
+      <tr>
+        <td><input 	id="startingSalaryId" type="number"
+          value="50000" min="0.0" step="1"
+          placeholder="Starting Salary" required></td>
+
+        <td><input 	id="annualSavingsId" type="number"
+          value="10.0" min="1" max="99" step="1"
+          placeholder="Annual Savings%" required></td>
+      </tr>
+      
+      <tr>
+        <td> <input 	id="annualRaiseId" type="number" 
+          value="2.0" min="1" max="99" step="1"
+          placeholder="Annual Raise%" required></td>
+
+        <td><input 	id="interestRateId" type="number"
+          value="7" min="1" max="99" step="1"
+          placeholder="Interest Rate%" required></td>
+      </tr>
+
+
+      
+    </table>
+		<div id="buttonDivId" class="center">
+      
+        <button type="button" onclick="clearInputs(this.form)">
+          Clear
+        </button>
+
+        <button type="button" onclick="loadDefaults(this.form)"> 
+          Defaults
+        </button>
+
+        <button type="button" onclick="runMakemerich(this.form)">
+          Make Me Rich
+        </button>
+       
+    
+    </div>
+	</form>
+
+<div id="summaryContainer" class="center-right">
+  <table id="detailTableId">
+    <tr><td>Years to Invest</td></tr>
+    <tr><td>Retirement Fund</td></tr>
+    <tr><td>Lifetime Salary</td></tr>
+    <tr><td>Total saved</td></tr>
+    <tr><td>Earned Interest</td></tr>
+  </table>
+</div>
+	
+<div id="resultsId" class="center">
+  <table id="summaryTableId" class="resultsTable">
+    <tr><th>Age</th><th>Salary</th><th>Savings</th><th>Interest</th><th>Retirement</th></tr>
+  </table>
+</div>
+	
+	<footer class="disclaimer">
+		<h2>&copy; Jasmine Chou</h2>
+		<p>This is A6 assignment </p>
+	</footer>
+
+  <script type="text/javascript" src="./FormattingToolsLibrary.js"></script>
+
+	<script type="text/javascript" src="./MMRWebApp_Chou_Min.js"></script>
+
+</body>
+</html>

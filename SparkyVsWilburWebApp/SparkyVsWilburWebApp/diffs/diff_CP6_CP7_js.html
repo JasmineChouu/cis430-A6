@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- This file was created with the aha Ansi HTML Adapter. https://github.com/theZiz/aha -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xml+xhtml; charset=UTF-8" />
+<title>_CP6_CP7_js</title>
+<style type="text/css">
+.reset       {color: black;}
+.bg-reset    {background-color: white;}
+.inverted    {color: white;}
+.bg-inverted {background-color: black;}
+.dimgray     {color: dimgray;}
+.red         {color: red;}
+.green       {color: green;}
+.yellow      {color: olive;}
+.blue        {color: blue;}
+.purple      {color: purple;}
+.cyan        {color: teal;}
+.white       {color: gray;}
+.bg-black    {background-color: black;}
+.bg-red      {background-color: red;}
+.bg-green    {background-color: green;}
+.bg-yellow   {background-color: olive;}
+.bg-blue     {background-color: blue;}
+.bg-purple   {background-color: purple;}
+.bg-cyan     {background-color: teal;}
+.bg-white    {background-color: gray;}
+.underline   {text-decoration: underline;}
+.bold        {font-weight: bold;}
+.italic      {font-style: italic;}
+.blink       {text-decoration: blink;}
+.crossed-out {text-decoration: line-through;}
+.highlighted {filter: contrast(70%) brightness(190%);}
+</style>
+</head>
+<body class="bold" style="background-color: cornsilk;">
+<pre>
+/**                                                                               /**
+ * SparkyVsWilbur.js                                                               * SparkyVsWilbur.js
+ */                                                                                */
+                                                                                   
+&quot;use strict&quot;;                                                                     &quot;use strict&quot;;
+
+var sparkyAnnualSavings     = 0;                                                  var sparkyAnnualSavings     = 0;
+var sparkyInterestRate      = 0;                                                  var sparkyInterestRate      = 0;
+var sparkyCompoundingYears  = 0;                                                  var sparkyCompoundingYears  = 0;
+var sparkyStartYear         = 0;                                                  var sparkyStartYear         = 0;
+var sparkyStopYear          = 0;                                                  var sparkyStopYear          = 0;
+
+var wilburAnnualSavings     = 0;                                                  var wilburAnnualSavings     = 0;
+var wilburInterestRate      = 0;                                                  var wilburInterestRate      = 0;
+var wilburCompoundingYears  = 0;                                                  var wilburCompoundingYears  = 0;
+var wilburStartYear         = 0;                                                  var wilburStartYear         = 0;
+var wilburStopYear          = 0;                                                  var wilburStopYear          = 0;
+
+var sparkyResultsTable;                                                           var sparkyResultsTable;
+var yearResultsTable;                                                             var yearResultsTable;  
+var wilburResultsTable;                                                           var wilburResultsTable;
+
+function initialize() {                                                           function initialize() {
+    // alert(&quot;In initialize(): Web App Loaded!&quot;);                                     // alert(&quot;In initialize(): Web App Loaded!&quot;);
+    sparkyResultsTable=document.getElementById('sparkyResultsTableId');               sparkyResultsTable=document.getElementById('sparkyResultsTableId');
+    yearResultsTable  =document.getElementById('yearResultsTableId');                 yearResultsTable  =document.getElementById('yearResultsTableId');
+    wilburResultsTable=document.getElementById('wilburResultsTableId');               wilburResultsTable=document.getElementById('wilburResultsTableId');
+
+    console.log(sparkyResultsTable);                                                  console.log(sparkyResultsTable);
+}                                                                                 }
+
+function clearInputs(form) {                                                      function clearInputs(form) {
+    // alert(&quot;function clearInputs() is running&quot;);                                    // alert(&quot;function clearInputs() is running&quot;);
+    var formElements = form.elements;                                                 var formElements = form.elements;
+    for (var i=0; i&lt; formElements.length; i++)                                        for (var i=0; i&lt; formElements.length; i++)
+        formElements[i].value=&quot;&quot;;                                                         formElements[i].value=&quot;&quot;;
+}                                                                                 }
+
+function loadDefaults(form) {                                                     function loadDefaults(form) {
+    // alert(&quot;function loadDefaults() is running&quot;);                                   // alert(&quot;function loadDefaults() is running&quot;);
+    form.reset();                                                                     form.reset();
+}                                                                                 }
+
+function getNumValue(id) {                                                        function getNumValue(id) {
+    return Number(document.getElementById(id).value);                                 return Number(document.getElementById(id).value);
+}                                                                                 }
+
+function runComparison(form) {                                                    function runComparison(form) {
+    if (!form.checkValidity()) {                                                      if (!form.checkValidity()) {
+        alert(&quot;See highlighted input boxes, there are input errors&quot;);                     alert(&quot;See highlighted input boxes, there are input errors&quot;);
+    } else {                                                                          } else {
+        sparkyAnnualSavings   = getNumValue('sparkyAnnualSavingsId');                     sparkyAnnualSavings   = getNumValue('sparkyAnnualSavingsId');
+        sparkyInterestRate    = getNumValue('sparkyInterestRateId');                      sparkyInterestRate    = getNumValue('sparkyInterestRateId');
+        sparkyCompoundingYears= getNumValue('sparkyCompoundingYearsId');                  sparkyCompoundingYears= getNumValue('sparkyCompoundingYearsId');
+        sparkyStartYear       = getNumValue('sparkyStartYearId');                         sparkyStartYear       = getNumValue('sparkyStartYearId');
+        sparkyStopYear        = getNumValue('sparkyStopYearId');                          sparkyStopYear        = getNumValue('sparkyStopYearId');
+
+        // fill in Wilbur's values                                                        // fill in Wilbur's values
+                                                                                          
+        console.log(&quot;*** Sparky's input values ***&quot;)                                      console.log(&quot;*** Sparky's input values ***&quot;)
+        console.log(&quot;sparkyAnnualSavings   :&quot;, sparkyAnnualSavings);                      console.log(&quot;sparkyAnnualSavings   :&quot;, sparkyAnnualSavings);
+        console.log(&quot;sparkyInterestRate    :&quot;, sparkyInterestRate);                       console.log(&quot;sparkyInterestRate    :&quot;, sparkyInterestRate);
+        console.log(&quot;sparkyCompoundingYears:&quot;, sparkyCompoundingYears);                   console.log(&quot;sparkyCompoundingYears:&quot;, sparkyCompoundingYears);
+        console.log(&quot;sparkyStartYear       :&quot;, sparkyStartYear);                          console.log(&quot;sparkyStartYear       :&quot;, sparkyStartYear);
+        console.log(&quot;sparkyStopYear        :&quot;, sparkyStopYear);                           console.log(&quot;sparkyStopYear        :&quot;, sparkyStopYear);
+
+        console.log(&quot;&quot;);                                                                  console.log(&quot;&quot;);
+                                                                                          
+        console.log(&quot;*** Wilbur's input values ***&quot;)                                      console.log(&quot;*** Wilbur's input values ***&quot;)
+        // fill in Wilbur's console.log()                                                 // fill in Wilbur's console.log()
+<span class="green ">                                                                               &gt;</span>
+<span class="green ">                                                                               &gt;          /* sparky's calculations */</span>
+<span class="green ">                                                                               &gt;</span>
+<span class="green ">                                                                               &gt;          var invest          = 0;</span>
+<span class="green ">                                                                               &gt;          var balance         = 0;</span>
+<span class="green ">                                                                               &gt;          var interest        = 0;</span>
+<span class="green ">                                                                               &gt;</span>
+<span class="green ">                                                                               &gt;          console.log(&quot;****** Sparky's Strategy ******&quot;)</span>
+<span class="green ">                                                                               &gt;          console.log(&quot;YR  Saving  Interest    Balance&quot;);</span>
+<span class="green ">                                                                               &gt;</span>
+<span class="green ">                                                                               &gt;          for (var i = 1; i &lt;= sparkyCompoundingYears; i++) {</span>
+<span class="green ">                                                                               &gt;              if ( i &gt;= sparkyStartYear &amp;&amp; i &lt;= sparkyStopYear ) {</span>
+<span class="green ">                                                                               &gt;                  invest = sparkyAnnualSavings;</span>
+<span class="green ">                                                                               &gt;              }</span>
+<span class="green ">                                                                               &gt;              else {</span>
+<span class="green ">                                                                               &gt;                  invest = 0;</span>
+<span class="green ">                                                                               &gt;              }</span>
+<span class="green ">                                                                               &gt;              balance += invest;</span>
+<span class="green ">                                                                               &gt;              interest = balance * sparkyInterestRate;</span>
+<span class="green ">                                                                               &gt;              balance += interest;</span>
+<span class="green ">                                                                               &gt;</span>
+<span class="green ">                                                                               &gt;              // write debugging info to the console</span>
+<span class="green ">                                                                               &gt;              console.log(</span>
+<span class="green ">                                                                               &gt;                  leftPadString(i.toString(), ' ', 2)</span>
+<span class="green ">                                                                               &gt;                  + leftPadString(formatNumberWithCommas(invest),  ' ', 8)</span>
+<span class="green ">                                                                               &gt;                  + leftPadString(formatNumberWithCommas(interest),' ',10)</span>
+<span class="green ">                                                                               &gt;                  + leftPadString(formatNumberWithCommas(balance), ' ',11)</span>
+<span class="green ">                                                                               &gt;              );</span>
+<span class="green ">                                                                               &gt;          } // end of for loop</span>
+<span class="green ">                                                                               &gt;</span>
+    } // end of else                                                                  } // end of else
+} // end of runComparison()                                                       } // end of runComparison()
+</pre>
+</body>
+</html>

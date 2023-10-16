@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sparky vs. Wilbur</title>
+	<link rel="stylesheet" type="text/css" href="./SparkyVsWilbur.css"></style>
+</head>
+<body>
+	<h1 class="center">Compare Investment Strategies</h1>
+	<hr>
+	<form id="inputFormId">
+		<table id="inputTableId" class="center">
+			<tr>
+				<th>Sparky's Strategy</th>
+				<th></th>
+				<th>Wilbur's Strategy</th>
+			</tr>
+			<tr>
+				<td>
+					<input 	id="sparkyAnnualSavingsId" type="number" 
+							value="5000" min="0" max="999999" step="any"
+							placeholder="dollars" required>
+				</td>
+				<td class="inputTableLabels">Annual Investment</td>
+				<td>
+					<input 	id="wilburAnnualSavingsId" type="number"
+							value="5000" min="0" max="999999" step="any"
+							placeholder="dollars" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input 	id="sparkyInterestRateId" type="number"
+							value="0.10" min="0.0" max="1.0" step="0.01"
+							placeholder="decimal" required>
+				</td>
+				<td class="inputTableLabels">Interest Rate</td>
+				<td>
+					<input 	id="wilburInterestRateId" type="number"
+							value="0.10" min="0.0" max="1.0" step="0.01"
+							placeholder="decimal" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input 	id="sparkyCompoundingYearsId" type="number" 
+							value="45" min="1" max="99" step="1"
+							placeholder="years" required>
+				</td>
+				<td class="inputTableLabels">Years until Retirement</td>
+				<td>
+					<input 	id="wilburCompoundingYearsId" type="number"
+							value="45" min="1" max="99" step="1"
+							placeholder="years" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input 	id="sparkyStartYearId" type="number" 
+							value="1" min="1" max="99" step="1"
+							placeholder="year number" required>
+				</td>
+				<td class="inputTableLabels">Start Saving Year</td>
+				<td>
+					<input 	id="wilburStartYearId" type="number"
+							value="11" min="1" max="99" step="1"
+							placeholder="year number" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input 	id="sparkyStopYearId" type="number" 
+							value="10" min="1" max="99" step="1"
+							placeholder="year number" required>
+				</td>
+				<td class="inputTableLabels">Stop Saving Year</td>
+				<td>
+					<input 	id="wilburStopYearId" type="number"
+							value="45" min="1" max="99" step="1"
+							placeholder="year number" required>
+				</td>
+			</tr>
+		</table>
+
+		<div id="buttonDivId" class="center">
+			<button type="button" onclick="clearInputs(this.form)">
+				Clear
+			</button>
+			
+			<button type="button" onclick="loadDefaults(this.form)"> 
+				Defaults
+			</button>
+			
+			<button type="button" onclick="runComparison(this.form)">
+				Compare
+			</button>
+		</div>
+
+	</form>
+
+	<hr>
+
+	<div id="resultsId" class="center">
+		<table id="sparkyResultsTableId" class="resultsTable">
+			<tr><th>Invest</th><th>Interest</th><th>Balance</th></tr>
+		</table>
+
+		<table id="yearResultsTableId" class="resultsTable">
+			<tr><th>YR</th></tr>
+		</table>	
+
+		<table id="wilburResultsTableId" class="resultsTable">
+			<tr><th>Invest</th><th>Interest</th><th>Balance</th></tr>
+		</table>
+	</div>
+	<footer class="disclaimer">
+		<h2>&copy; Daniel Mazzola and ABOR</h2>
+		<p>This is for educational and informational purposes only.  
+			It should not be considered legal or financial advice.  
+			You should consult with an attorney or other professional to 
+			determine what may be best for your individual needs. </p>	
+	</footer>
+
+	<!-- ================================================================== -->
+	<!-- We place our calls to JavaScript at the bottom of the HTML         -->
+	<!-- that way, all of the HTML is loaded and the DOM is created before  -->
+	<!-- calling our scripts - see body onload="func()" for additional      -->
+	<!-- approaches that ensures we don't start using the DOM too early     -->
+	<!-- ================================================================== -->
+
+	<script type="text/javascript" src="./SparkyVsWilbur.js"></script>
+
+</body>
+</html>

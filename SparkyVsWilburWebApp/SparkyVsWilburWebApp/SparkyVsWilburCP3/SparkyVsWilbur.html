@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sparky vs. Wilbur</title>
+	<link rel="stylesheet" type="text/css" href="./SparkyVsWilbur.css"></style>
+</head>
+<body>
+	<h1 class="center">Compare Investment Strategies</h1>
+	<hr>
+	<form id="inputFormId">
+		<table id="inputTableId" class="center">
+			<tr>
+				<th>Sparky's Strategy</th>
+				<th></th>
+				<th>Wilbur's Strategy</th>
+			</tr>
+			<tr>
+				<td>
+					<input 	id="sparkyAnnualSavingsId" type="number" 
+							value="5000" min="0" max="999999" step="any"
+							placeholder="dollars" required>
+				</td>
+				<td class="inputTableLabels">Annual Investment</td>
+				<td>
+					<input 	id="wilburAnnualSavingsId" type="number"
+							value="5000" min="0" max="999999" step="any"
+							placeholder="dollars" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input 	id="sparkyInterestRateId" type="number"
+							value="0.10" min="0.0" max="1.0" step="0.01"
+							placeholder="decimal" required>
+				</td>
+				<td class="inputTableLabels">Interest Rate</td>
+				<td>
+					<input 	id="wilburInterestRateId" type="number"
+							value="0.10" min="0.0" max="1.0" step="0.01"
+							placeholder="decimal" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input 	id="sparkyCompoundingYearsId" type="number" 
+							value="45" min="1" max="99" step="1"
+							placeholder="years" required>
+				</td>
+				<td class="inputTableLabels">Years until Retirement</td>
+				<td>
+					<input 	id="wilburCompoundingYearsId" type="number"
+							value="45" min="1" max="99" step="1"
+							placeholder="years" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input 	id="sparkyStartYearId" type="number" 
+							value="1" min="1" max="99" step="1"
+							placeholder="year number" required>
+				</td>
+				<td class="inputTableLabels">Start Saving Year</td>
+				<td>
+					<input 	id="wilburStartYearId" type="number"
+							value="11" min="1" max="99" step="1"
+							placeholder="year number" required>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input 	id="sparkyStopYearId" type="number" 
+							value="10" min="1" max="99" step="1"
+							placeholder="year number" required>
+				</td>
+				<td class="inputTableLabels">Stop Saving Year</td>
+				<td>
+					<input 	id="wilburStopYearId" type="number"
+							value="45" min="1" max="99" step="1"
+							placeholder="year number" required>
+				</td>
+			</tr>
+		</table>
+
+		<div id="buttonDivId" class="center">
+			<button> Clear </button>
+			
+			<button> Defaults </button>
+			
+			<button> Compare </button>
+		</div>
+
+	</form>
+
+	<hr>
+
+	<div id="resultsId" class="center">
+		<table id="sparkyResultsTableId" class="resultsTable">
+			<tr><th>Invest</th><th>Interest</th><th>Balance</th></tr>
+			<tr><td> 5,000</td><td>     500</td><td>  5,500</td></tr> 
+			<tr><td> 5,000</td><td>   1,050</td><td> 11,550</td></tr>
+			<tr><td> 5,000</td><td>   1,655</td><td> 18,205</td></tr>
+			<tr><td> 5,000</td><td>   2,320</td><td> 25,526</td></tr>
+			<tr><td> 5,000</td><td>   3,053</td><td> 33,578</td></tr>
+			<tr><td> 5,000</td><td>   3,858</td><td> 42,436</td></tr>
+			<tr><td> 5,000</td><td>   4,744</td><td> 52,179</td></tr>
+			<tr><td> 5,000</td><td>   5,718</td><td> 62,897</td></tr>
+			<tr><td> 5,000</td><td>   6,790</td><td> 74,687</td></tr>
+			<tr><td> 5,000</td><td>   7,969</td><td> 87,656</td></tr>
+			<tr><td>     0</td><td>   8,766</td><td> 96,421</td></tr>
+			<tr><td>     0</td><td>   9,642</td><td>106,064</td></tr>
+		</table>
+
+		<table id="yearResultsTableId" class="resultsTable">
+			<tr><th>YR</th></tr>
+			<tr><td> 1</td></tr>
+			<tr><td> 2</td></tr>
+			<tr><td> 3</td></tr>
+			<tr><td> 4</td></tr>
+			<tr><td> 5</td></tr>
+			<tr><td> 6</td></tr>
+			<tr><td> 7</td></tr>
+			<tr><td> 8</td></tr>
+			<tr><td> 9</td></tr>
+			<tr><td>10</td></tr>
+			<tr><td>11</td></tr>
+			<tr><td>12</td></tr>
+		</table>	
+
+		<table id="wilburResultsTableId" class="resultsTable">
+			<tr><th>Invest</th><th>Interest</th><th>Balance</th></tr>
+			<tr><td>     0</td><td>       0</td><td>      0</td></tr>
+			<tr><td>     0</td><td>       0</td><td>      0</td></tr>
+			<tr><td>     0</td><td>       0</td><td>      0</td></tr>
+			<tr><td>     0</td><td>       0</td><td>      0</td></tr>
+			<tr><td>     0</td><td>       0</td><td>      0</td></tr>
+			<tr><td>     0</td><td>       0</td><td>      0</td></tr>
+			<tr><td>     0</td><td>       0</td><td>      0</td></tr>
+			<tr><td>     0</td><td>       0</td><td>      0</td></tr>
+			<tr><td>     0</td><td>       0</td><td>      0</td></tr>
+			<tr><td>     0</td><td>       0</td><td>      0</td></tr>
+			<tr><td> 5,000</td><td>     500</td><td>  5,500</td></tr> 
+			<tr><td> 5,000</td><td>   1,050</td><td> 11,550</td></tr>
+		</table>
+	</div>
+	<footer class="disclaimer">
+		<h2>&copy; Daniel Mazzola and ABOR</h2>
+		<p>This is for educational and informational purposes only.  
+			It should not be considered legal or financial advice.  
+			You should consult with an attorney or other professional to 
+			determine what may be best for your individual needs. </p>	
+	</footer>
+</body>
+</html>

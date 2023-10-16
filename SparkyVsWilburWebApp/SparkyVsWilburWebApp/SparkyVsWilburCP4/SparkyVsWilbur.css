@@ -1,0 +1,88 @@
+body {
+	font-family:  		sans-serif;
+	font-size: 			24px;
+	background-color: 	peachpuff;
+}
+
+hr {
+	width: 				85%;
+	color: 				saddlebrown; /* internet explorer */
+	background-color: 	saddlebrown; /* firefox and Opera */
+	border-color: 		saddlebrown; /* chrome and Safari */
+}
+
+.center {
+	margin: 			auto;
+	display: 			table;
+}
+
+footer {
+	color: 				#999999;
+	font-family: 		serif;
+	font-style: 		italic;
+	font-size: 			0.5em;
+	text-align: 		center;
+	margin: 			5% 20% 5% 20%; /* top, right, bottom, left */
+}
+
+input[type=number] {
+	text-align: 		right;
+	font-family: 		monospace;
+	font-size: 			1.0em;
+	width: 				8em;
+}
+
+#inputTableId th {
+	color: 				saddlebrown;
+	font-size: 			0.85em;
+}
+
+.inputTableLabels {
+	text-align: 		center;
+	padding-left: 		8px;
+	padding-right: 		8px;
+}
+
+input:invalid 			{ border: 2px solid #A00000; }
+input:valid 			{ border: 2px solid #00A000; }
+input:focus:invalid 	{ color: red; }
+input:focus:valid 		{ color: black; }
+
+button {
+	font-size: 			1.2em;
+	background-color: 	#bbbbbb;
+	margin: 			12px;
+	width: 				7.0em;
+}
+
+.resultsTable {
+	font-family: 		monospace;
+	font-weight: 		bold;
+	text-align: 		right;
+	border-collapse: 	collapse;
+}
+
+.resultsTable td, .resultsTable th {
+	border: 			1px solid black;
+	padding-left: 		12px;
+	padding-right: 		12px;
+}
+
+#sparkyResultsTableId {
+	color: 				maroon;
+	background-color: 	gold;
+	float:  			left;
+}
+
+#yearResultsTableId {
+	color:  			black;
+	background-color: 	sienna;
+	text-align:  		center;	
+	float:  			left;		
+}
+
+#wilburResultsTableId {
+	color: 				#000099;
+	background-color:  	rgba(160, 0, 37, 0.500);
+}
+

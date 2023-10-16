@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- This file was created with the aha Ansi HTML Adapter. https://github.com/theZiz/aha -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="application/xml+xhtml; charset=UTF-8" />
+<title>_CP4_CP5_html</title>
+<style type="text/css">
+.reset       {color: black;}
+.bg-reset    {background-color: white;}
+.inverted    {color: white;}
+.bg-inverted {background-color: black;}
+.dimgray     {color: dimgray;}
+.red         {color: red;}
+.green       {color: green;}
+.yellow      {color: olive;}
+.blue        {color: blue;}
+.purple      {color: purple;}
+.cyan        {color: teal;}
+.white       {color: gray;}
+.bg-black    {background-color: black;}
+.bg-red      {background-color: red;}
+.bg-green    {background-color: green;}
+.bg-yellow   {background-color: olive;}
+.bg-blue     {background-color: blue;}
+.bg-purple   {background-color: purple;}
+.bg-cyan     {background-color: teal;}
+.bg-white    {background-color: gray;}
+.underline   {text-decoration: underline;}
+.bold        {font-weight: bold;}
+.italic      {font-style: italic;}
+.blink       {text-decoration: blink;}
+.crossed-out {text-decoration: line-through;}
+.highlighted {filter: contrast(70%) brightness(190%);}
+</style>
+</head>
+<body class="bold" style="background-color: cornsilk;">
+<pre>
+&lt;!DOCTYPE html&gt;                                                                   &lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;                                                                  &lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;                                                                            &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;                                                            &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Sparky vs. Wilbur&lt;/title&gt;                                                  &lt;title&gt;Sparky vs. Wilbur&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./SparkyVsWilbur.css&quot;&gt;&lt;/style        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./SparkyVsWilbur.css&quot;&gt;&lt;/style
+&lt;/head&gt;                                                                           &lt;/head&gt;
+<span class="cyan ">&lt;body&gt;                                                                         |  &lt;body onload=&quot;initialize()&quot;&gt;</span>
+    &lt;h1 class=&quot;center&quot;&gt;Compare Investment Strategies&lt;/h1&gt;                             &lt;h1 class=&quot;center&quot;&gt;Compare Investment Strategies&lt;/h1&gt;
+    &lt;hr&gt;                                                                              &lt;hr&gt;
+    &lt;form id=&quot;inputFormId&quot;&gt;                                                           &lt;form id=&quot;inputFormId&quot;&gt;
+        &lt;table id=&quot;inputTableId&quot; class=&quot;center&quot;&gt;                                          &lt;table id=&quot;inputTableId&quot; class=&quot;center&quot;&gt;
+            &lt;tr&gt;                                                                              &lt;tr&gt;
+                &lt;th&gt;Sparky's Strategy&lt;/th&gt;                                                        &lt;th&gt;Sparky's Strategy&lt;/th&gt;
+                &lt;th&gt;&lt;/th&gt;                                                                         &lt;th&gt;&lt;/th&gt;
+                &lt;th&gt;Wilbur's Strategy&lt;/th&gt;                                                        &lt;th&gt;Wilbur's Strategy&lt;/th&gt;
+            &lt;/tr&gt;                                                                             &lt;/tr&gt;
+            &lt;tr&gt;                                                                              &lt;tr&gt;
+                &lt;td&gt;                                                                              &lt;td&gt;
+                    &lt;input  id=&quot;sparkyAnnualSavingsId&quot; type=&quot;number&quot;                                  &lt;input  id=&quot;sparkyAnnualSavingsId&quot; type=&quot;number&quot; 
+                            value=&quot;5000&quot; min=&quot;0&quot; max=&quot;999999&quot; step=&quot;any&quot;                                      value=&quot;5000&quot; min=&quot;0&quot; max=&quot;999999&quot; step=&quot;any&quot;
+                            placeholder=&quot;dollars&quot; required&gt;                                                   placeholder=&quot;dollars&quot; required&gt;
+                &lt;/td&gt;                                                                             &lt;/td&gt;
+                &lt;td class=&quot;inputTableLabels&quot;&gt;Annual Investment&lt;/td&gt;                               &lt;td class=&quot;inputTableLabels&quot;&gt;Annual Investment&lt;/td&gt;
+                &lt;td&gt;                                                                              &lt;td&gt;
+                    &lt;input  id=&quot;wilburAnnualSavingsId&quot; type=&quot;number&quot;                                  &lt;input  id=&quot;wilburAnnualSavingsId&quot; type=&quot;number&quot;
+                            value=&quot;5000&quot; min=&quot;0&quot; max=&quot;999999&quot; step=&quot;any&quot;                                      value=&quot;5000&quot; min=&quot;0&quot; max=&quot;999999&quot; step=&quot;any&quot;
+                            placeholder=&quot;dollars&quot; required&gt;                                                   placeholder=&quot;dollars&quot; required&gt;
+                &lt;/td&gt;                                                                             &lt;/td&gt;
+            &lt;/tr&gt;                                                                             &lt;/tr&gt;
+            &lt;tr&gt;                                                                              &lt;tr&gt;
+                &lt;td&gt;                                                                              &lt;td&gt;
+                    &lt;input  id=&quot;sparkyInterestRateId&quot; type=&quot;number&quot;                                   &lt;input  id=&quot;sparkyInterestRateId&quot; type=&quot;number&quot;
+                            value=&quot;0.10&quot; min=&quot;0.0&quot; max=&quot;1.0&quot; step=&quot;0.01&quot;                                      value=&quot;0.10&quot; min=&quot;0.0&quot; max=&quot;1.0&quot; step=&quot;0.01&quot;
+                            placeholder=&quot;decimal&quot; required&gt;                                                   placeholder=&quot;decimal&quot; required&gt;
+                &lt;/td&gt;                                                                             &lt;/td&gt;
+                &lt;td class=&quot;inputTableLabels&quot;&gt;Interest Rate&lt;/td&gt;                                   &lt;td class=&quot;inputTableLabels&quot;&gt;Interest Rate&lt;/td&gt;
+                &lt;td&gt;                                                                              &lt;td&gt;
+                    &lt;input  id=&quot;wilburInterestRateId&quot; type=&quot;number&quot;                                   &lt;input  id=&quot;wilburInterestRateId&quot; type=&quot;number&quot;
+                            value=&quot;0.10&quot; min=&quot;0.0&quot; max=&quot;1.0&quot; step=&quot;0.01&quot;                                      value=&quot;0.10&quot; min=&quot;0.0&quot; max=&quot;1.0&quot; step=&quot;0.01&quot;
+                            placeholder=&quot;decimal&quot; required&gt;                                                   placeholder=&quot;decimal&quot; required&gt;
+                &lt;/td&gt;                                                                             &lt;/td&gt;
+            &lt;/tr&gt;                                                                             &lt;/tr&gt;
+            &lt;tr&gt;                                                                              &lt;tr&gt;
+                &lt;td&gt;                                                                              &lt;td&gt;
+                    &lt;input  id=&quot;sparkyCompoundingYearsId&quot; type=&quot;number&quot;                               &lt;input  id=&quot;sparkyCompoundingYearsId&quot; type=&quot;number&quot; 
+                            value=&quot;45&quot; min=&quot;1&quot; max=&quot;99&quot; step=&quot;1&quot;                                              value=&quot;45&quot; min=&quot;1&quot; max=&quot;99&quot; step=&quot;1&quot;
+                            placeholder=&quot;years&quot; required&gt;                                                     placeholder=&quot;years&quot; required&gt;
+                &lt;/td&gt;                                                                             &lt;/td&gt;
+                &lt;td class=&quot;inputTableLabels&quot;&gt;Years until Retirement&lt;/td&gt;                          &lt;td class=&quot;inputTableLabels&quot;&gt;Years until Retirement&lt;/td&gt;
+                &lt;td&gt;                                                                              &lt;td&gt;
+                    &lt;input  id=&quot;wilburCompoundingYearsId&quot; type=&quot;number&quot;                               &lt;input  id=&quot;wilburCompoundingYearsId&quot; type=&quot;number&quot;
+                            value=&quot;45&quot; min=&quot;1&quot; max=&quot;99&quot; step=&quot;1&quot;                                              value=&quot;45&quot; min=&quot;1&quot; max=&quot;99&quot; step=&quot;1&quot;
+                            placeholder=&quot;years&quot; required&gt;                                                     placeholder=&quot;years&quot; required&gt;
+                &lt;/td&gt;                                                                             &lt;/td&gt;
+            &lt;/tr&gt;                                                                             &lt;/tr&gt;
+            &lt;tr&gt;                                                                              &lt;tr&gt;
+                &lt;td&gt;                                                                              &lt;td&gt;
+                    &lt;input  id=&quot;sparkyStartYearId&quot; type=&quot;number&quot;                                      &lt;input  id=&quot;sparkyStartYearId&quot; type=&quot;number&quot; 
+                            value=&quot;1&quot; min=&quot;1&quot; max=&quot;99&quot; step=&quot;1&quot;                                               value=&quot;1&quot; min=&quot;1&quot; max=&quot;99&quot; step=&quot;1&quot;
+                            placeholder=&quot;year number&quot; required&gt;                                               placeholder=&quot;year number&quot; required&gt;
+                &lt;/td&gt;                                                                             &lt;/td&gt;
+                &lt;td class=&quot;inputTableLabels&quot;&gt;Start Saving Year&lt;/td&gt;                               &lt;td class=&quot;inputTableLabels&quot;&gt;Start Saving Year&lt;/td&gt;
+                &lt;td&gt;                                                                              &lt;td&gt;
+                    &lt;input  id=&quot;wilburStartYearId&quot; type=&quot;number&quot;                                      &lt;input  id=&quot;wilburStartYearId&quot; type=&quot;number&quot;
+                            value=&quot;11&quot; min=&quot;1&quot; max=&quot;99&quot; step=&quot;1&quot;                                              value=&quot;11&quot; min=&quot;1&quot; max=&quot;99&quot; step=&quot;1&quot;
+                            placeholder=&quot;year number&quot; required&gt;                                               placeholder=&quot;year number&quot; required&gt;
+                &lt;/td&gt;                                                                             &lt;/td&gt;
+            &lt;/tr&gt;                                                                             &lt;/tr&gt;
+            &lt;tr&gt;                                                                              &lt;tr&gt;
+                &lt;td&gt;                                                                              &lt;td&gt;
+                    &lt;input  id=&quot;sparkyStopYearId&quot; type=&quot;number&quot;                                       &lt;input  id=&quot;sparkyStopYearId&quot; type=&quot;number&quot; 
+                            value=&quot;10&quot; min=&quot;1&quot; max=&quot;99&quot; step=&quot;1&quot;                                              value=&quot;10&quot; min=&quot;1&quot; max=&quot;99&quot; step=&quot;1&quot;
+                            placeholder=&quot;year number&quot; required&gt;                                               placeholder=&quot;year number&quot; required&gt;
+                &lt;/td&gt;                                                                             &lt;/td&gt;
+                &lt;td class=&quot;inputTableLabels&quot;&gt;Stop Saving Year&lt;/td&gt;                                &lt;td class=&quot;inputTableLabels&quot;&gt;Stop Saving Year&lt;/td&gt;
+                &lt;td&gt;                                                                              &lt;td&gt;
+                    &lt;input  id=&quot;wilburStopYearId&quot; type=&quot;number&quot;                                       &lt;input  id=&quot;wilburStopYearId&quot; type=&quot;number&quot;
+                            value=&quot;45&quot; min=&quot;1&quot; max=&quot;99&quot; step=&quot;1&quot;                                              value=&quot;45&quot; min=&quot;1&quot; max=&quot;99&quot; step=&quot;1&quot;
+                            placeholder=&quot;year number&quot; required&gt;                                               placeholder=&quot;year number&quot; required&gt;
+                &lt;/td&gt;                                                                             &lt;/td&gt;
+            &lt;/tr&gt;                                                                             &lt;/tr&gt;
+        &lt;/table&gt;                                                                          &lt;/table&gt;
+
+        &lt;div id=&quot;buttonDivId&quot; class=&quot;center&quot;&gt;                                             &lt;div id=&quot;buttonDivId&quot; class=&quot;center&quot;&gt;
+            &lt;button type=&quot;button&quot; onclick=&quot;clearInputs(this.form)&quot;&gt;                           &lt;button type=&quot;button&quot; onclick=&quot;clearInputs(this.form)&quot;&gt;
+                Clear                                                                             Clear
+            &lt;/button&gt;                                                                         &lt;/button&gt;
+                                                                                              
+            &lt;button type=&quot;button&quot; onclick=&quot;loadDefaults(this.form)&quot;&gt;                          &lt;button type=&quot;button&quot; onclick=&quot;loadDefaults(this.form)&quot;&gt; 
+                Defaults                                                                          Defaults
+            &lt;/button&gt;                                                                         &lt;/button&gt;
+                                                                                              
+            &lt;button type=&quot;button&quot; onclick=&quot;runComparison(this.form)&quot;&gt;                         &lt;button type=&quot;button&quot; onclick=&quot;runComparison(this.form)&quot;&gt;
+                Compare                                                                           Compare
+            &lt;/button&gt;                                                                         &lt;/button&gt;
+        &lt;/div&gt;                                                                            &lt;/div&gt;
+
+    &lt;/form&gt;                                                                           &lt;/form&gt;
+
+    &lt;hr&gt;                                                                              &lt;hr&gt;
+
+    &lt;div id=&quot;resultsId&quot; class=&quot;center&quot;&gt;                                               &lt;div id=&quot;resultsId&quot; class=&quot;center&quot;&gt;
+        &lt;table id=&quot;sparkyResultsTableId&quot; class=&quot;resultsTable&quot;&gt;                            &lt;table id=&quot;sparkyResultsTableId&quot; class=&quot;resultsTable&quot;&gt;
+            &lt;tr&gt;&lt;th&gt;Invest&lt;/th&gt;&lt;th&gt;Interest&lt;/th&gt;&lt;th&gt;Balance&lt;/th&gt;&lt;/tr&gt;                         &lt;tr&gt;&lt;th&gt;Invest&lt;/th&gt;&lt;th&gt;Interest&lt;/th&gt;&lt;th&gt;Balance&lt;/th&gt;&lt;/tr&gt;
+        &lt;/table&gt;                                                                          &lt;/table&gt;
+
+        &lt;table id=&quot;yearResultsTableId&quot; class=&quot;resultsTable&quot;&gt;                              &lt;table id=&quot;yearResultsTableId&quot; class=&quot;resultsTable&quot;&gt;
+            &lt;tr&gt;&lt;th&gt;YR&lt;/th&gt;&lt;/tr&gt;                                                              &lt;tr&gt;&lt;th&gt;YR&lt;/th&gt;&lt;/tr&gt;
+        &lt;/table&gt;                                                                          &lt;/table&gt;    
+
+        &lt;table id=&quot;wilburResultsTableId&quot; class=&quot;resultsTable&quot;&gt;                            &lt;table id=&quot;wilburResultsTableId&quot; class=&quot;resultsTable&quot;&gt;
+            &lt;tr&gt;&lt;th&gt;Invest&lt;/th&gt;&lt;th&gt;Interest&lt;/th&gt;&lt;th&gt;Balance&lt;/th&gt;&lt;/tr&gt;                         &lt;tr&gt;&lt;th&gt;Invest&lt;/th&gt;&lt;th&gt;Interest&lt;/th&gt;&lt;th&gt;Balance&lt;/th&gt;&lt;/tr&gt;
+        &lt;/table&gt;                                                                          &lt;/table&gt;
+    &lt;/div&gt;                                                                            &lt;/div&gt;
+    &lt;footer class=&quot;disclaimer&quot;&gt;                                                       &lt;footer class=&quot;disclaimer&quot;&gt;
+        &lt;h2&gt;&amp;copy; Daniel Mazzola and ABOR&lt;/h2&gt;                                           &lt;h2&gt;&amp;copy; Daniel Mazzola and ABOR&lt;/h2&gt;
+        &lt;p&gt;This is for educational and informational purposes only.                       &lt;p&gt;This is for educational and informational purposes only.  
+            It should not be considered legal or financial advice.                            It should not be considered legal or financial advice.  
+            You should consult with an attorney or other professional to                      You should consult with an attorney or other professional to 
+            determine what may be best for your individual needs. &lt;/p&gt;                        determine what may be best for your individual needs. &lt;/p&gt;  
+    &lt;/footer&gt;                                                                         &lt;/footer&gt;
+
+    &lt;!-- ================================================================== --        &lt;!-- ================================================================== --
+    &lt;!-- We place our calls to JavaScript at the bottom of the HTML         --        &lt;!-- We place our calls to JavaScript at the bottom of the HTML         --
+    &lt;!-- that way, all of the HTML is loaded and the DOM is created before  --        &lt;!-- that way, all of the HTML is loaded and the DOM is created before  --
+    &lt;!-- calling our scripts - see body onload=&quot;func()&quot; for additional      --        &lt;!-- calling our scripts - see body onload=&quot;func()&quot; for additional      --
+    &lt;!-- approaches that ensures we don't start using the DOM too early     --        &lt;!-- approaches that ensures we don't start using the DOM too early     --
+    &lt;!-- ================================================================== --        &lt;!-- ================================================================== --
+
+    &lt;script type=&quot;text/javascript&quot; src=&quot;./SparkyVsWilbur.js&quot;&gt;&lt;/script&gt;                &lt;script type=&quot;text/javascript&quot; src=&quot;./SparkyVsWilbur.js&quot;&gt;&lt;/script&gt;
+
+&lt;/body&gt;                                                                           &lt;/body&gt;
+&lt;/html&gt;                                                                           &lt;/html&gt;
+</pre>
+</body>
+</html>
